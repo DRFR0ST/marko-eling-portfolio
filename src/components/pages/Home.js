@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
 const Home = () => {
     const classes = useStyles();
 
-    return <div className={classes.root}>Home</div>
+    return <div className={classes.root}>Chuj pizda ciota</div>
 }
 
 export default Home;
