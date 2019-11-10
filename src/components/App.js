@@ -1,6 +1,7 @@
 import React from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Nav, Routes } from "./shared";
+import Devel from './Devel';
 
 const theme = createMuiTheme({
   palette: {
@@ -23,6 +24,7 @@ function App() {
         <Nav />
         <Routes />
       </ThemeProvider>
+      {process.env.REACT_APP_MODE !== "prod" && <Devel />}
     </div>
   );
 }
