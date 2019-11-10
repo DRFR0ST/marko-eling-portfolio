@@ -1,6 +1,8 @@
 import React from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Nav, Routes } from "./shared";
+import Undraw from 'react-undraw';
+ 
 
 const theme = createMuiTheme({
   palette: {
@@ -11,6 +13,8 @@ const theme = createMuiTheme({
   },
   spacing: 8
 });
+
+Undraw.setDefaultProps({ primaryColor: theme.palette.primary.main });
 
 function App() {
   return (
