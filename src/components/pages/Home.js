@@ -1,16 +1,22 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
+import { Header, About, Skills, Contact } from "../common";
 
 const useStyles = makeStyles(theme => ({
   root: {
-      background: theme.palette.background
+      
   }
 }));
 
 const Home = () => {
     const classes = useStyles();
 
-    return <div className={classes.root}>Home</div>
+    return <div className={classes.root}>
+      <Header />
+      <About />
+      <Skills />
+      <Contact />
+    </div>
 }
 
 export default Home;
