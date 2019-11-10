@@ -9,7 +9,11 @@ const theme = createMuiTheme({
     primary: {
       main: "#50C39C"
     },
-    background: "#FAFAFA"
+    background: "#fff",
+    border: "#d5d5d5",
+    text: {
+      main: "#555555"
+    }
   },
   spacing: 8
 });
