@@ -5,7 +5,7 @@ import { Home, ErrorPage } from "components/pages"
 
 const Routes = () => {
   return (
-    <Router basename={process.env.REACT_APP_BASE_URL || "/"}>
+    <Router basename="/">
         <Switch>
             <Route exact path="/" component={Home} />
             <Route component={ErrorPage} />
