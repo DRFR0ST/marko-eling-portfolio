@@ -2,6 +2,7 @@
   "name": "marko-eling-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://drfr0st.github.io/marko-eling-portfolio",
   "dependencies": {
     "@material-ui/core": "^4.6.0",
     "react": "^16.11.0",
