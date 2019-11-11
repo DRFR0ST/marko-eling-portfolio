@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
-import { Header, About, Skills, Contact, Hire } from "../common";
+import { Header, About, Skills, Contact } from "../common";
 
 const useStyles = makeStyles(theme => ({
   root: {

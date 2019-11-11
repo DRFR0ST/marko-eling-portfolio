@@ -2,8 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { useTheme } from "@material-ui/core";
 
-const progressHeight = 30;
-
 const useStyles = makeStyles(theme => ({
     root: {
         position: "relative",
@@ -63,7 +61,7 @@ const SkillBar = ({image, name, description, value, color}) => {
         if(value === 100) s.borderBottomRightRadius = theme.borderRadius;
 
         return s;
-    }, [value, color])
+    }, [value, color]) // eslint-disable-line
 
     return <div className={classes.root}>
         <div className={classes.content}>
