@@ -10,7 +10,7 @@ p.mono {
 
 h2.logo {
     font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 @media (prefers-color-scheme: dark) {

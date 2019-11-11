@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^4.6.0",
     "@material-ui/styles": "^4.6.0",
+    "emailjs-com": "^2.4.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-littera": "^1.2.1",
