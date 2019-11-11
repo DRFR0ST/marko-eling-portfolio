@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/marko-eling-portfolio/precache-manifest.4795e8135ac20a9aea92f2fa6a48a3c3.js"
+  "/marko-eling-portfolio/precache-manifest.70b0e0150576ae5f8a020ade25960ec2.js"
 );
 
 self.addEventListener('message', (event) => {
