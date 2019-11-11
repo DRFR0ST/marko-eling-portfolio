@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button, IconButton, Tooltip, useTheme } from "@material-ui/core";
-import { UndrawAstronaut } from "react-undraw";
+import Undraw from "react-undraw";
 import Icon from "@material-ui/core/Icon";
 import emailjs from "emailjs-com";
 
@@ -255,7 +255,7 @@ const Contact = () => {
           )}
           {success && (
             <React.Fragment>
-              <UndrawAstronaut height="300px" primaryColor={theme.palette.primary.main} />
+              <Undraw name="Astronaut" height="300px" primaryColor={theme.palette.primary.main} />
             </React.Fragment>
           )}
         </div>
