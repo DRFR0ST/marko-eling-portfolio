@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Button, IconButton, Tooltip, useTheme } from "@material-ui/core";
+import { TextField, Button, IconButton, Tooltip } from "@material-ui/core";
 import Icon from "@material-ui/core/Icon";
 import emailjs from "emailjs-com";
 
@@ -116,7 +116,7 @@ const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
-  const theme = useTheme();
+  // const theme = useTheme();
   const classes = useStyles();
 
   const handleSubmit = e => {
