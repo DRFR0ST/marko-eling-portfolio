@@ -1,55 +1,81 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
+import { useTheme } from "@material-ui/core";
 
 const progressHeight = 30;
 
 const useStyles = makeStyles(theme => ({
     root: {
         position: "relative",
+        border: `1px solid ${theme.palette.border}`,
         width: "100%",
+        borderRadius: theme.borderRadius,
+        paddingBottom: 0,
+        display: "flex",
+        flexDirection: "column",
         margin: `${theme.spacing()*4}px ${theme.spacing()}px`,
-        "@media (min-width: 767px)": {
+        "@media (min-width: 769px)": {
             width: `40%`,
             margin: `${theme.spacing()*2}px ${theme.spacing()}px`,
         }
     },
-    progressBorder: {
-        position: "relative",
-        width: "97%",
-        borderRadius: progressHeight,
-        height: progressHeight,
-        border: "1px solid rgba(21, 21, 21, 0.15)",
-        marginLeft: "2%",
+    content: {
+        padding: `${theme.spacing()*3}px ${theme.spacing()}px ${theme.spacing()*2}px`,
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center"
     },
-    progress: {
-        position: "absolute",
-        left: "0",
-        width: "99%",
-        height: "75%",
-        top: "50%",
-        transform: "translateY(-50%)",
-        borderRadius: progressHeight,
-        background: theme.palette.primary.main
+    brand: {
+        display: "flex",
+        flexDirection: "column",
+        width: "20%",
+    },
+    description: {
+        width: "50%",
     },
     icon: {
-        zIndex:2,
-        position: "absolute",
-        width: "auto",
-        height: progressHeight + 30,
-        top: "50%",
-        left: "-10px",
-        transform: "translateY(-50%)"
+        maxWidth: "100%",
+        height: "auto",
+        maxHeight: "125px",
+        margin: "0 auto"
+    },
+    progress: {
+        position: "relative",
+        background: "#BD0000",
+        height: "8px",
+        borderBottomLeftRadius: theme.borderRadius,
+        justifySelf: "flex-end",
+        margin: "auto 0 0 0"
     }
 }));
 
-const SkillBar = ({image, name, value, color}) => {
+const SkillBar = ({image, name, description, value, color}) => {
     const classes = useStyles();
+    const theme = useTheme();
+
+    const progressStyle = React.useMemo(() => {
+        let s = {};
+
+        s.width = `${value}%`;
+        s.background = color;
+
+        if(value === 100) s.borderBottomRightRadius = theme.borderRadius;
+
+        return s;
+    }, [value, color])
+
     return <div className={classes.root}>
-        <div className={classes.progressBorder}>
-            <img className={classes.icon} alt="icon" src={image} />
-            <div className={classes.progress} style={{width: `${value}%`, background: color}} />
+        <div className={classes.content}>
+            <div className={classes.brand}>
+                <img className={classes.icon} alt="icon" src={image} />
+            </div>
+            <div className={classes.description}>
+                <h4 style={{textAlign: "left"}}>{name}</h4>
+                <p className="mono">{description}</p>
+            </div>
         </div>
-        <p className="mono" style={{textAlign: "right", marginRight: "10px"}}>{name}</p>
+        <div className={classes.progress} style={progressStyle}></div>
     </div>
 }
 

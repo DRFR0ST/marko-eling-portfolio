@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles';
-import { Header, About, Skills, Contact } from "../common";
+import { Header, About, Skills, Contact, Hire } from "../common";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -15,6 +15,7 @@ const Home = () => {
       <Header />
       <About />
       <Skills />
+      <Hire />
       <Contact />
     </div>
 }

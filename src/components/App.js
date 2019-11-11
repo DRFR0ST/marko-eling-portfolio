@@ -14,7 +14,8 @@ const theme = createMuiTheme({
       main: "#555555"
     }
   },
-  spacing: 8
+  spacing: 8,
+  borderRadius: 10
 });
 
 function App() {

@@ -5,6 +5,7 @@ const useStyle = makeStyles(theme => ({
     root: {
         padding: "25px 50px 5vh 50px",
         margin: `${theme.spacing()*3}px auto`,
+        maxWidth: "1210px",
         "@media (max-width: 767px)": {
             width: "90%",
             padding: "25px 25px 2.5vh 50px"
