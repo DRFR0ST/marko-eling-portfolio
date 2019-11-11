@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: 0,
         display: "flex",
         flexDirection: "column",
-        margin: `${theme.spacing()*4}px auto`,
+        margin: `${theme.spacing()*3}px auto`,
         "@media (min-width: 769px)": {
             width: `40%`,
             margin: `${theme.spacing()*2}px ${theme.spacing()}px`,
