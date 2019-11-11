@@ -36,6 +36,11 @@ const useStyles = makeStyles(theme => ({
       position: "relative",
       top: "-5%"
     },
+    "& span": {
+      "@media (prefers-color-scheme: dark)": { 
+        color: theme.palette.text.main
+      }
+    },
     "& div": {
       marginLeft: theme.spacing()
     }
@@ -77,12 +82,16 @@ const useStyles = makeStyles(theme => ({
   "@media (prefers-color-scheme: dark)": {
     inputRoot: {
       background: "rgba(255, 255, 255, 0.08)",
-      "&:hover": {
+      "&:hover, &:focus": {
         background: "rgba(255, 255, 255, 0.12)",
         ".MuiFilledInput-underline:hover:before": {
             background: "rgba(255, 255, 255, 0.14)",
         }
       },
+      buttonRoot: {
+        borderColor: theme.palette.text.main,
+        color: theme.palette.text.main
+      }
     },
     underline: {
       "&:before": {
@@ -134,7 +143,7 @@ const Contact = () => {
               <TextField {...textFieldProps} multiline label="Message" style={{width: "100%", marginBottom: "10px"}} variant="filled" />
               <br />
               <br />
-              <Button variant="outlined" size="large" align="right" style={{float: "right"}}>Submit</Button>
+              <Button classes={{root: classes.buttonRoot}} variant="outlined" size="large" align="right" style={{float: "right"}}>Submit</Button>
               <div style={{clear: "both"}} />
             </form>
           </div>

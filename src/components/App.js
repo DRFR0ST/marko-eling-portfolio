@@ -1,6 +1,6 @@
 import React from "react";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { Nav, Routes } from "./shared";
+import { Nav, Routes,Footer } from "./shared";
 import darkTheme from "themes/dark";
 import lightTheme from "themes/light";
 
@@ -21,6 +21,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Nav />
         <Routes />
+        <Footer/>
       </ThemeProvider>
     </div>
   );
