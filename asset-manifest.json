@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/marko-eling-portfolio/static/css/main.74449772.chunk.css",
-    "main.js": "/marko-eling-portfolio/static/js/main.1a098bef.chunk.js",
-    "main.js.map": "/marko-eling-portfolio/static/js/main.1a098bef.chunk.js.map",
+    "main.js": "/marko-eling-portfolio/static/js/main.768e4dcd.chunk.js",
+    "main.js.map": "/marko-eling-portfolio/static/js/main.768e4dcd.chunk.js.map",
     "runtime-main.js": "/marko-eling-portfolio/static/js/runtime-main.d9b21d86.js",
     "runtime-main.js.map": "/marko-eling-portfolio/static/js/runtime-main.d9b21d86.js.map",
-    "static/js/2.18ff757f.chunk.js": "/marko-eling-portfolio/static/js/2.18ff757f.chunk.js",
-    "static/js/2.18ff757f.chunk.js.map": "/marko-eling-portfolio/static/js/2.18ff757f.chunk.js.map",
+    "static/js/2.534ef0eb.chunk.js": "/marko-eling-portfolio/static/js/2.534ef0eb.chunk.js",
+    "static/js/2.534ef0eb.chunk.js.map": "/marko-eling-portfolio/static/js/2.534ef0eb.chunk.js.map",
     "index.html": "/marko-eling-portfolio/index.html",
-    "precache-manifest.70b0e0150576ae5f8a020ade25960ec2.js": "/marko-eling-portfolio/precache-manifest.70b0e0150576ae5f8a020ade25960ec2.js",
+    "precache-manifest.22511fa15312d7941f6e6f90d67a8d9e.js": "/marko-eling-portfolio/precache-manifest.22511fa15312d7941f6e6f90d67a8d9e.js",
     "service-worker.js": "/marko-eling-portfolio/service-worker.js",
     "static/css/main.74449772.chunk.css.map": "/marko-eling-portfolio/static/css/main.74449772.chunk.css.map",
     "static/media/header_illustration.svg": "/marko-eling-portfolio/static/media/header_illustration.5db7de97.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d9b21d86.js",
-    "static/js/2.18ff757f.chunk.js",
+    "static/js/2.534ef0eb.chunk.js",
     "static/css/main.74449772.chunk.css",
-    "static/js/main.1a098bef.chunk.js"
+    "static/js/main.768e4dcd.chunk.js"
   ]
 }
