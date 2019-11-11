@@ -8,12 +8,12 @@ const useStyles = makeStyles(theme => ({
     root: {
         position: "relative",
         border: `1px solid ${theme.palette.border}`,
-        width: "100%",
+        width: "92%",
         borderRadius: theme.borderRadius,
         paddingBottom: 0,
         display: "flex",
         flexDirection: "column",
-        margin: `${theme.spacing()*4}px ${theme.spacing()}px`,
+        margin: `${theme.spacing()*4}px auto`,
         "@media (min-width: 769px)": {
             width: `40%`,
             margin: `${theme.spacing()*2}px ${theme.spacing()}px`,

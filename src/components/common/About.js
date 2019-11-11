@@ -8,14 +8,15 @@ const useStyle = makeStyles(theme => ({
         maxWidth: "1210px",
         "@media (max-width: 767px)": {
             width: "90%",
-            padding: "25px 25px 2.5vh 50px"
+            padding: "25px 25px 2.5vh 25px"
         }
     },
     card: {
         position: "relative",
         padding: theme.spacing()*3,
         background: theme.palette.background,
-        "max-width": "800px",
+        "width": "800px",
+        maxWidth: "100%",
         "margin": "auto",
         "& h1": {
             marginTop: 0
@@ -51,7 +52,9 @@ const useStyle = makeStyles(theme => ({
             "background-size": "10px 10px",
         },
         "@media (max-width: 767px)": {
-            margin: "0"
+            margin: "0",
+            "width": "auto",
+            padding: "none"
         }
     },
     block: {
