@@ -1,31 +1,27 @@
-import React from 'react';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import React from "react";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import { Nav, Routes } from "./shared";
-import Devel from './Devel';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#50C39C"
-    },
-    background: "#fff",
-    border: "#d5d5d5",
-    text: {
-      main: "#555555"
-    }
-  },
-  spacing: 8,
-  borderRadius: 10
-});
+import darkTheme from "themes/dark";
+import lightTheme from "themes/light";
 
 function App() {
+  const themeProps = React.useMemo(
+    () =>
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? darkTheme
+        : lightTheme,
+    []
+  );
+
+  const theme = createMuiTheme(themeProps);
+
   return (
     <div>
       <ThemeProvider theme={theme}>
         <Nav />
         <Routes />
       </ThemeProvider>
-      {process.env.REACT_APP_MODE !== "prod" && <Devel />}
     </div>
   );
 }

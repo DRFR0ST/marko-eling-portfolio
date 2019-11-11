@@ -12,3 +12,20 @@ h2.logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
 }
+
+@media (prefers-color-scheme: dark) {
+    p {
+        color: #fafafa;
+    }
+    
+    h1, h2, h3, h4 {
+        color: #fafafa;
+    }
+
+    html {
+        background: #121212;
+    }
+    body {
+        background: transparent;
+    }
+}

@@ -5,6 +5,7 @@
   "homepage": "https://drfr0st.github.io/marko-eling-portfolio",
   "dependencies": {
     "@material-ui/core": "^4.6.0",
+    "@material-ui/styles": "^4.6.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-littera": "^1.2.1",
