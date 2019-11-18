@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { useTheme } from "@material-ui/core";
 
+import {useLittera} from "react-littera";
+
 const useStyles = makeStyles(theme => ({
     root: {
         position: "relative",
@@ -48,7 +50,8 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const SkillBar = ({image, name, description, value, color}) => {
+const SkillBar = ({image, name, description, value, color, translation}) => {
+    const [translated] = useLittera(translation);
     const classes = useStyles();
     const theme = useTheme();
 
@@ -69,8 +72,8 @@ const SkillBar = ({image, name, description, value, color}) => {
                 <img className={classes.icon} alt="icon" src={image} />
             </div>
             <div className={classes.description}>
-                <h4 style={{textAlign: "left"}}>{name}</h4>
-                <p className="mono">{description}</p>
+                <h4 style={{textAlign: "left"}}>{translated.name || name}</h4>
+                <p className="mono">{translated.description || description}</p>
             </div>
         </div>
         <div className={classes.progress} style={progressStyle}></div>

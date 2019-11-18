@@ -36,6 +36,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Footer = () => {
+  // eslint-disable-next-line
   const [_translated, language, setLanguage] = useLittera({});
   const classes = useStyles();
 
