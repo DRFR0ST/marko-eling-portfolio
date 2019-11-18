@@ -8290,10 +8290,10 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.10.1.tgz#0612786bf19df406502d935494f0450b40b8294f"
   integrity sha512-BXUMf9sIOPXXZWqr7+c5SeOKJykyVr2u0UDzEf4LNGc6taGkQe1A9DFD07umCIXz45RLr9oAAwZbAJ0Pkknfaw==
 
-react-littera@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-littera/-/react-littera-1.2.1.tgz#a68d88406ba08d9406993f4fcd7a955e18f15a74"
-  integrity sha512-BLZvEMV9ysl76Hgm1ufg9CQrW3LsXdivoNmCDxPN+5b4GaLwugeSvw3+hGmSo+ilo/4pu1/OIfz6SuWxGHH8cw==
+react-littera@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-littera/-/react-littera-1.1.4.tgz#cf26839db195ae1286a25e5e93d8ab9ab433f25b"
+  integrity sha512-ob43uMFIMf89iCSEdgehFr1jx9BzHYs6a6OL1Xn3HgzlYOdxxvKVfZN9WrO03VpglhZsWY/O8pGvcBy4FO8ZAg==
 
 react-router-dom@^5.1.2:
   version "5.1.2"

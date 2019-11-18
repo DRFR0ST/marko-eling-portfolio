@@ -1,5 +1,7 @@
 import React from "react"
 import { makeStyles } from "@material-ui/styles"
+import {useLittera} from "react-littera";
+import {TAbout} from "translations/"
 
 const useStyle = makeStyles(theme => ({
     root: {
@@ -72,17 +74,18 @@ const useStyle = makeStyles(theme => ({
 }));
 
 const About = () => {
+    console.log(TAbout);
+    const [translations] = useLittera(TAbout);
+    console.log(translations);
     const classes = useStyle();
 
     return <div className={classes.root}>
         <div className={classes.card}>
-        <h1>About me</h1>
-        <p className="mono">Elit incididunt cillum eiusmod aliqua proident eiusmod. Consequat qui tempor minim fugiat eiusmod mollit id nisi magna fugiat aliquip deserunt laboris. Ad nulla exercitation elit quis esse incididunt ut ullamco cupidatat dolore. Cupidatat cupidatat esse aliqua tempor.</p>
-        <p className="mono">Irure ut minim cupidatat sint fugiat amet eu. Nostrud ullamco sint ea nostrud. Amet aute non aliqua incididunt.</p>
-        <p className="mono">Commodo et dolor cupidatat voluptate id esse nostrud duis id culpa officia nisi labore eiusmod. Eiusmod qui minim laborum qui nulla et. Voluptate nisi laborum ea et ex elit. Deserunt laborum officia aliqua id proident cupidatat eiusmod culpa esse nisi nisi et incididunt. Ut dolore aliqua proident id et labore.</p>
-        <p className="mono"></p>
-        <div className={classes.block} />
-        <div style={{clear: "both"}} />
+            <h1>{translations.title}</h1>
+            {translations.description}
+            <p className="mono"></p>
+            <div className={classes.block} />
+            <div style={{clear: "both"}} />
         </div>
     </div>
 }

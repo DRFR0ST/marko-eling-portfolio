@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { TextField, Button, IconButton, Tooltip } from "@material-ui/core";
 import Icon from "@material-ui/core/Icon";
 import emailjs from "emailjs-com";
+import {useLittera} from "react-littera";
+import {TContact} from "translations/"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -115,6 +117,8 @@ const Contact = () => {
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
 
+  const [translated] = useLittera(TContact);
+
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
@@ -179,7 +183,7 @@ const Contact = () => {
     <div className={classes.root}>
       <div className={classes.content}>
         <div className={classes.infoContainer}>
-          <h1 style={{ opacity: 0.8 }}>Contact</h1>
+          <h1 style={{ opacity: 0.8 }}>{translated.title}</h1>
           {contactInfo.map(e => (
             <div key={e.value} className={classes.infoItem}>
               <Icon>{e.icon}</Icon> <p className="mono">{e.value}</p>
@@ -198,7 +202,7 @@ const Contact = () => {
         <div className={classes.formContainer}>
           {!success && (
             <React.Fragment>
-              <h2 style={{ opacity: 0.75 }}>Contact me</h2>
+              <h2 style={{ opacity: 0.75 }}>{translated.formTitle}</h2>
               <form onSubmit={() => null}>
                 <div className={classes.doubleField}>
                   <TextField
@@ -207,7 +211,7 @@ const Contact = () => {
                     {...textFieldProps}
                     value={nameValue}
                     onChange={e => handleChange(e.target.value, setNameValue)}
-                    label="Name"
+                    label={translated.formFieldName}
                     variant="outlined"
                   />
                   <TextField
@@ -216,7 +220,7 @@ const Contact = () => {
                     {...textFieldProps}
                     value={emailValue}
                     onChange={e => handleChange(e.target.value, setEmailValue)}
-                    label="Email"
+                    label={translated.formFieldEmail}
                     variant="outlined"
                     style={{ marginLeft: "6px" }}
                     type="email"
@@ -230,7 +234,7 @@ const Contact = () => {
                   helperText={messageError}
                   onChange={e => handleChange(e.target.value, setMessageValue)}
                   multiline
-                  label="Message"
+                  label={translated.formFieldMessage}
                   style={{ width: "100%", marginBottom: "10px" }}
                   variant="outlined"
                 />
@@ -251,7 +255,7 @@ const Contact = () => {
                   onClick={handleSubmit}
                   style={{ float: "right", color: "#fff" }}
                 >
-                  Submit{" "}
+                  {translated.formFieldSubmit}
                   <Icon style={{ marginLeft: "10px", fontSize: "18px" }}>
                     send
                   </Icon>
