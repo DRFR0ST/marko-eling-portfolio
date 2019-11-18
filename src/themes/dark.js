@@ -5,7 +5,7 @@ export default {
     },
     background: {
       main: "#121212",
-      dark: "#191919"
+      dark: "#1b1b1b"
     },
     border: "#2e2e2e",
     text: {

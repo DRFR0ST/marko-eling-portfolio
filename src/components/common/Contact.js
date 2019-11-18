@@ -34,7 +34,8 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing() * 3,
     "@media (max-width: 982px)": {
       position: "relative",
-      top: "-5%"
+      top: "-5%",
+      width: "90%"
     },
     "& span": {
       "@media (prefers-color-scheme: dark)": {
@@ -113,6 +114,7 @@ const Contact = () => {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
+
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
@@ -129,9 +131,9 @@ const Contact = () => {
         reply_to: emailValue
       });
     else {
-      if(!nameValue) setNameError("Can't be empty");
-      if(!emailValue) setEmailError("Can't be empty");
-      if(!messageValue) setMessageError("Can't be empty");
+      if(!nameValue) setNameError("Requied field.");
+      if(!emailValue || !validateEmail(emailValue)) setEmailError("Incorrect entry.");
+      if(!messageValue) setMessageError("Required field.");
     }
     e.preventDefault();
   };
@@ -162,6 +164,9 @@ const Contact = () => {
   const handleChange = (v, fn) => {
     fn && fn(v);
     setError(null);
+    setEmailError("");
+    setNameError("");
+    setMessageError("");
   };
 
   const contactInfo = [
@@ -197,7 +202,8 @@ const Contact = () => {
               <form onSubmit={() => null}>
                 <div className={classes.doubleField}>
                   <TextField
-                    error={nameError}
+                    error={Boolean(nameError)}
+                    helperText={nameError}
                     {...textFieldProps}
                     value={nameValue}
                     onChange={e => handleChange(e.target.value, setNameValue)}
@@ -205,7 +211,8 @@ const Contact = () => {
                     variant="outlined"
                   />
                   <TextField
-                    error={emailError || validateEmail(emailValue) ? false : "Invalid format"}
+                    error={Boolean(emailError)}
+                    helperText={emailError}
                     {...textFieldProps}
                     value={emailValue}
                     onChange={e => handleChange(e.target.value, setEmailValue)}
@@ -219,7 +226,8 @@ const Contact = () => {
                 <TextField
                   {...textFieldProps}
                   value={messageValue}
-                  error={messageError}
+                  error={Boolean(messageError)}
+                  helperText={messageError}
                   onChange={e => handleChange(e.target.value, setMessageValue)}
                   multiline
                   label="Message"
@@ -268,7 +276,6 @@ const Contact = () => {
 export default Contact;
 
 function validateEmail(email) {
-  if(email.length === 0) return true;
   var re = /^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
