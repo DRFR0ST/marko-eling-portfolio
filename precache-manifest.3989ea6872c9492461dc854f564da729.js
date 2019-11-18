@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6710b1000220f423158e824de1887608",
+    "revision": "76712609e0d90b1d03e67b9d36e8aafc",
     "url": "/marko-eling-portfolio/index.html"
   },
   {
-    "revision": "dbe56d72dd1574145b12",
+    "revision": "46215a19d61621934c34",
     "url": "/marko-eling-portfolio/static/css/main.54778689.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/marko-eling-portfolio/static/js/2.ae88805c.chunk.js"
   },
   {
-    "revision": "dbe56d72dd1574145b12",
-    "url": "/marko-eling-portfolio/static/js/main.cf4b15a5.chunk.js"
+    "revision": "46215a19d61621934c34",
+    "url": "/marko-eling-portfolio/static/js/main.868c6312.chunk.js"
   },
   {
     "revision": "ccf26ae3f9d7a9540d63",
