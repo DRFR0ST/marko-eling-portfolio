@@ -74,9 +74,7 @@ const useStyle = makeStyles(theme => ({
 }));
 
 const About = () => {
-    console.log(TAbout);
     const [translations] = useLittera(TAbout);
-    console.log(translations);
     const classes = useStyle();
 
     return <div className={classes.root}>

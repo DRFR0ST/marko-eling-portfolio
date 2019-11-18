@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import { Nav, Routes,Footer } from "./shared";
+import { Nav, Routes, Footer } from "./shared";
 import darkTheme from "themes/dark";
 import lightTheme from "themes/light";
 import LitteraProvider from "react-littera";
@@ -20,15 +20,15 @@ function App() {
   const theme = createMuiTheme(themeProps);
 
   return (
-      <LitteraProvider language={language} setLanguage={setLanguage}>
-    <div>
+    <LitteraProvider language={language} setLanguage={setLanguage}>
+      <div>
         <ThemeProvider theme={theme}>
           <Nav />
           <Routes />
-          <Footer/>
+          <Footer />
         </ThemeProvider>
-    </div>
-      </LitteraProvider>
+      </div>
+    </LitteraProvider>
   );
 }
 

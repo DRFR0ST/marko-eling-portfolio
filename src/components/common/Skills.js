@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { SkillBar } from "../shared";
-import {useLittera} from "react-littera";
 import {TSkills} from "translations/"
 
 const useStyles = makeStyles(theme => ({
